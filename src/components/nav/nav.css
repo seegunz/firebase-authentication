@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+nav a{
+    font-size: 20px;
+}
+
+nav button{
+    padding: 5px;
+    width: 100px;
+    font-weight: bold;
+}

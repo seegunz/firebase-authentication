@@ -1,0 +1,6 @@
+export {default as Nav} from './nav/Navbar'
+export {default as Profile} from './profile/Profile'
+export {default as Signup} from './signup/Signup'
+export {default as Login} from './Login/Login'
+export {default as Reset} from './Login/Reset'
+export {default as About} from './about/About'

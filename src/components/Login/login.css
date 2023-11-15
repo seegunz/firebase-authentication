@@ -1,0 +1,30 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    flex-basis: 40px;
+    width: 400px;
+    padding-left: 10px;
+}
+
+button{
+    width: 400px;
+    padding: 20px 0;
+}
+
+.reset{
+    display: flex;
+    justify-content: end;
+    color: blue;
+    cursor: pointer;
+}
