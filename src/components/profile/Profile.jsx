@@ -3,7 +3,7 @@ import './profile.css'
 import { db } from '../auth/firebase'
 import { useContext } from 'react'
 import { AppContext } from '../../App'
-import { addDoc, collection, getDocs } from 'firebase/firestore'
+import { addDoc, collection, deleteDoc, doc, getDocs } from 'firebase/firestore'
 import { TiDelete } from "react-icons/ti";
 
 
@@ -32,8 +32,9 @@ export default function Profile() {
        setInput('')
     }
 
-    function handleDelete() {
-      
+    async function handleDelete(id) {
+      const deleteList = doc(db, "post", id)
+      await deleteDoc(deleteList)
     }
     
   return (
@@ -45,7 +46,12 @@ export default function Profile() {
           <button type="submit">Add Post</button>
       </form>
       <div className='post'>
-          {list.sort().map((items, i) => <div key={i}><p style={{paddingLeft:'3px'}}>{items.addPost}</p> <p className='delete-post' onClick={handleDelete}><TiDelete /></p> </div>)}
+          {list.sort().map((items, i) => {
+          return (
+            <div key={i}>
+              <p style={{paddingLeft:'3px'}}>{items.addPost}</p> 
+              <p className='delete-post' onClick={()=>handleDelete(items.id)}><TiDelete /></p> 
+            </div>)})}
       </div>
     </div>
   )
