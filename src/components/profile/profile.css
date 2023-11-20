@@ -1,0 +1,13 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile form input{
+    padding: 30px 5px;
+}
+
+.profile form input::placeholder{
+    text-align: center;
+}
