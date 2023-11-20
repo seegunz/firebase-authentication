@@ -4,6 +4,7 @@ import { db } from '../auth/firebase'
 import { useContext } from 'react'
 import { AppContext } from '../../App'
 import { addDoc, collection, getDocs } from 'firebase/firestore'
+import { TiDelete } from "react-icons/ti";
 
 
 export default function Profile() {
@@ -30,6 +31,10 @@ export default function Profile() {
       // })
        setInput('')
     }
+
+    function handleDelete() {
+      
+    }
     
   return (
     <div className='profile'>
@@ -40,7 +45,7 @@ export default function Profile() {
           <button type="submit">Add Post</button>
       </form>
       <div className='post'>
-          {list.sort().map((items, i) => <p key={i}>{items.addPost} </p>)}
+          {list.sort().map((items, i) => <div key={i}><p style={{paddingLeft:'3px'}}>{items.addPost}</p> <p className='delete-post' onClick={handleDelete}><TiDelete /></p> </div>)}
       </div>
     </div>
   )

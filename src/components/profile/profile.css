@@ -11,3 +11,17 @@
 .profile form input::placeholder{
     text-align: center;
 }
+
+.profile .post{
+    width: 400px;
+    padding: 0 5px;
+}
+
+.profile .post div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-post{
+    cursor: pointer;
+}
